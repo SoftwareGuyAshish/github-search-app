@@ -19,9 +19,8 @@ const Repos = ({ repos_url }) => {
         <ListGroupItem key={repo.id}>
           {
             <>
-              <div className="text-primary">{repo.name}</div>
-              <div className="text-secondary">{repo.language}</div>
-              <div className="text-primary">{repo.description}</div>
+              <div className="text-primary ">{repo.name}</div>
+              <div className="text-secondary ">{repo.language}</div>
             </>
           }
         </ListGroupItem>

@@ -12,14 +12,13 @@ import {
 } from "reactstrap";
 
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Repos from "../Components/Repos";
 import UserCard from "../Components/UserCard";
 import UserContext from "../context/UserContext";
 
 const Home = () => {
-  let navigate = useNavigate();
   const context = useContext(UserContext);
   const [user, setUser] = useState(null);
   const [query, setQuery] = useState("");
@@ -35,7 +34,7 @@ const Home = () => {
   };
 
   if (!context.user?.uid) {
-    return navigate("/signup");
+    return <Navigate to="/signup" />;
   }
 
   return (

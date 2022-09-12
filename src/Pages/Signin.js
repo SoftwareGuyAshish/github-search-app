@@ -1,6 +1,6 @@
 import firebase from "firebase/compat/app";
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
   Button,
@@ -87,6 +87,9 @@ const Signin = () => {
                     </Col>
                   </FormGroup>
                 </CardBody>
+                <p>
+                  Don't have an account? <Link to="/signup">Sign Up here</Link>
+                </p>
                 <CardFooter>
                   <Button type="submit" block color="primary">
                     Sign In
